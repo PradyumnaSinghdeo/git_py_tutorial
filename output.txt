@@ -1,0 +1,8 @@
+This is a new file 
+Append line 
+Append line 
+Append line 
+Append line 
+Append line 
+Append line 
+yes tested
