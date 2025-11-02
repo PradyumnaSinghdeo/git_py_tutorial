@@ -1,8 +1,5 @@
-This is a new file 
-Append line 
-Append line 
-Append line 
-Append line 
-Append line 
-Append line 
-yes tested
+Hello,Python!
+This is a new line.
+Append Line.
+Append Line.
+Append Line.
