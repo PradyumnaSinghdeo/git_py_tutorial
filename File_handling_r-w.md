@@ -50,4 +50,16 @@ except FileNotFoundError:
 except PermissionError:
     print("Insufficinent Permission to read the file")
 
-    
+
+Example 1: Reading and Writing CSV Files
+# Writing to a CSV file
+import csv
+
+with open('data.csv', 'w', newline='', encoding='utf-8') as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(['name', 'age', 'city'])
+    writer.writerow(['Alice', 30, 'New York'])
+    writer.writerow(['Bob', 25, 'London'])
+
+Explanation: The csv.writer writes rows to the file, while csv.reader reads them back as lists.
+
