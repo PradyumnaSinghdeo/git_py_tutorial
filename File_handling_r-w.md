@@ -65,3 +65,40 @@ with open('data.csv', 'w', newline='', encoding='utf-8') as csvfile:
 
 Explanation: The csv.writer writes rows to the file, while csv.reader reads them back as lists.
 
+# Example 3: Reading and Writing JSON Files
+
+import json
+
+# Writing to a JSON file
+data = {
+    'name': 'Eve',
+    'age': 35,
+    'skills': ['Python', 'Data Science']
+}
+
+with open('data.json', 'w', encoding = 'utf-8') as jsonfile:
+    json.dump(data, jsonfile, indent = 4)
+    
+    
+# Reading from a JSON file
+with open('data.json', 'r')as jsonfile:
+    loaded_data = json.load(jsonfile)
+    print(loaded_data)
+
+# Explanation: json.dump serializes a Python object to a file, while json.load parses it back.
+
+
+# Example 4: Converting CSV to JSON
+
+import json
+import csv
+
+with open('data.csv', 'r', encoding = 'utf-8') as csvfile:
+    reader = csv.DictReader(csvfile)
+    rows = list(reader)
+    
+with open('data_converted.json', "w") as jsonfile:
+    json.dump(rows, jsonfile, indent=4)
+
+# Explanation: Reads CSV rows as dictionaries and writes them as a JSON array.
+
